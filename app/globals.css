@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050014;
+  --foreground: #f4f0ff;
+  --violet: #a78bfa;
+  --violet-hot: #ddd6fe;
+  --violet-deep: #2e1065;
+  --void: #050014;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-violet: var(--violet);
+  --color-violet-hot: var(--violet-hot);
+  --color-violet-deep: var(--violet-deep);
+  --color-void: var(--void);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-geistMono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--void);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--void);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #7c3aed;
+  color: #faf5ff;
+}
+
+:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+input {
+  caret-color: #c4b5fd;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5b21b6 transparent;
+}
+
+input::placeholder {
+  color: color-mix(in oklab, var(--violet-hot) 45%, transparent);
+}

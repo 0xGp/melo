@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-19T17:10:00.000Z",
+  "title": "Design System: MELO",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#050014",
+        "tonalRamp": ["#050014", "#12061f", "#1c0a33", "#2e1065", "#5b21b6", "#a78bfa", "#ddd6fe", "#f4f0ff"]
+      },
+      "violet": {
+        "role": "primary",
+        "displayName": "Accretion Violet",
+        "canonical": "#a78bfa",
+        "tonalRamp": ["#2e1065", "#4c1d95", "#5b21b6", "#7c3aed", "#a78bfa", "#c4b5fd", "#ddd6fe", "#f4f0ff"]
+      },
+      "violet-hot": {
+        "role": "primary",
+        "displayName": "Hot Rim",
+        "canonical": "#ddd6fe",
+        "tonalRamp": ["#2e1065", "#4c1d95", "#6d28d9", "#a78bfa", "#c4b5fd", "#ddd6fe", "#f4f0ff", "#ffffff"]
+      },
+      "violet-deep": {
+        "role": "primary",
+        "displayName": "Settlement Field",
+        "canonical": "#2e1065",
+        "tonalRamp": ["#050014", "#1c0a33", "#2e1065", "#4c1d95", "#5b21b6", "#a78bfa", "#ddd6fe", "#f4f0ff"]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Foreground",
+        "canonical": "#f4f0ff",
+        "tonalRamp": ["#050014", "#2e1065", "#4c1d95", "#a78bfa", "#c4b5fd", "#ddd6fe", "#f4f0ff", "#ffffff"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#050014", "#2e1065", "#a78bfa", "#c4b5fd", "#ddd6fe", "#f4f0ff", "#faf5ff", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only; light weight so the hole can speak." },
+      "heading": { "displayName": "Heading", "purpose": "Section titles." },
+      "body": { "displayName": "Body", "purpose": "Mechanism copy." },
+      "data": { "displayName": "Data", "purpose": "Tickers, shares, blotter headers." }
+    },
+    "shadows": [
+      {
+        "name": "plate",
+        "value": "0 24px 48px rgba(0,0,0,0.45)",
+        "purpose": "Bento plates over the void."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-exit",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "The hole is the authored motion; UI eases out of already-visible state."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Waitlist and access pills on the void.",
+      "html": "<button class=\"ds-btn-primary\">Join the waitlist</button>",
+      "css": ".ds-btn-primary { background: #ddd6fe; color: #050014; padding: 12px 24px; border: 0; border-radius: 9999px; font: 500 14px Geist, ui-sans-serif, sans-serif; cursor: pointer; } .ds-btn-primary:hover { background: #ffffff; } .ds-btn-primary:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet companion to the primary pill.",
+      "html": "<button class=\"ds-btn-secondary\">See the protocol</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: rgba(255,255,255,0.8); padding: 12px 24px; border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px; font: 400 14px Geist, ui-sans-serif, sans-serif; cursor: pointer; } .ds-btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: #fff; } .ds-btn-secondary:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 3px; }"
+    },
+    {
+      "name": "Email Input",
+      "kind": "input",
+      "refersTo": "input-email",
+      "description": "Waitlist field on black or violet-deep.",
+      "html": "<input class=\"ds-input-email\" type=\"email\" placeholder=\"you@domain.com\" />",
+      "css": ".ds-input-email { height: 48px; width: 100%; padding: 0 20px; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.4); color: #fff; font: 400 14px Geist, ui-sans-serif, sans-serif; } .ds-input-email::placeholder { color: rgba(221,214,254,0.4); } .ds-input-email:focus { outline: none; border-color: #a78bfa; caret-color: #c4b5fd; }"
+    },
+    {
+      "name": "Primary Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixed void bar over the hole.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\"></span><span class=\"ds-nav-word\">MELO</span><a href=\"#waitlist\" class=\"ds-btn-primary\">Join the waitlist</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgba(5,0,20,0.85); color: #fff; font: 600 14px Geist, ui-sans-serif, sans-serif; letter-spacing: 0.18em; } .ds-nav-mark { width: 28px; height: 28px; border-radius: 9999px; background: radial-gradient(circle at 50% 50%, #050014 0 7px, #a78bfa 8px 14px); display: inline-block; margin-right: 10px; } .ds-nav-word { letter-spacing: 0.18em; } .ds-btn-primary { background: #ddd6fe; color: #050014; padding: 8px 16px; border: 0; border-radius: 9999px; font: 500 14px Geist, ui-sans-serif, sans-serif; letter-spacing: 0; }"
+    },
+    {
+      "name": "Bento Plate",
+      "kind": "card",
+      "refersTo": "bento-plate",
+      "description": "Photographic protocol cell with a violet scrim.",
+      "html": "<article class=\"ds-plate\"><span class=\"ds-plate-ticker\">COST</span><h3 class=\"ds-plate-title\">Spend the way you already spend</h3></article>",
+      "css": ".ds-plate { background: #000; color: #fff; border-radius: 16px; box-shadow: 0 24px 48px rgba(0,0,0,0.45); outline: 1px solid rgba(255,255,255,0.1); padding: 40px; } .ds-plate-ticker { font: 400 12px 'Geist Mono', ui-monospace, monospace; letter-spacing: 0.18em; color: #ddd6fe; } .ds-plate-title { font: 500 24px Geist, ui-sans-serif, sans-serif; margin: 8px 0 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The gravity well of spending.",
+    "overview": "MELO’s marketing surface is a black field with one committed violet. The first viewport is a ray-traced accretion disk — not a screenshot of an app. Copy sits in the dark left (or the top on a phone). Violet is the action and the close, not a sprinkle of accents.",
+    "keyCharacteristics": [
+      "Void black (#050014) as the page ground.",
+      "Violet as the only saturated hue: disk, marks, primary pills, waitlist field.",
+      "Geist light for display, Geist medium for section titles, Geist Mono only for tickers and the ledger.",
+      "Hairline white/10 rings, 16px plates, pill controls."
+    ],
+    "rules": [
+      { "name": "The One Hue Rule", "body": "If it is not black, white, or violet, it does not ship on this surface.", "section": "colors" },
+      { "name": "The In-Hue Rule", "body": "Secondary text is a dimmer violet-hot, not slate gray.", "section": "colors" },
+      { "name": "The Measure Rule", "body": "Display does not exceed ~4.35rem. Body stays near 1.125rem / 1.6.", "section": "typography" }
+    ],
+    "dos": [
+      "Put the black hole in the first viewport and keep copy off its busy half.",
+      "Label illustrative ledgers as demonstration data.",
+      "Use Geist Mono only for instruments (tickers, shares, emails).",
+      "Let one section be violet (the close)."
+    ],
+    "donts": [
+      "Invent waitlist counts, volume, or merchant contracts.",
+      "Use gradient text, numbered step cards, or kickers above section titles.",
+      "Introduce a second accent (emerald, blue, gold).",
+      "Set display type heavier than the picture."
+    ]
+  }
+}
