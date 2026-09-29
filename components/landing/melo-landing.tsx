@@ -6,6 +6,7 @@ import { BlackHoleHeroSection } from "@/components/ui/blackhole-hero-section";
 import FUIBentoGridDark from "@/components/ui/bento";
 import { SiteFooter, SiteNav } from "@/components/site/site-nav";
 import { VaultPanel } from "@/components/wallet/vault-panel";
+import { ContractAddress } from "@/components/landing/contract-address";
 
 function useNarrow(query = "(max-width: 767px)") {
   const [narrow, setNarrow] = useState(false);
@@ -55,6 +56,7 @@ function Hero() {
       >
         <div className="flex h-full min-h-[100svh] items-start px-6 pt-28 sm:px-10 md:items-center md:pt-8 lg:px-20">
           <div className="max-w-[34rem]">
+            <ContractAddress className="mb-6 md:mb-8" />
             <h1 className="text-[2.6rem] font-light leading-[1.04] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.35rem]">
               Spend becomes
               <br />

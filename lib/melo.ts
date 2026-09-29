@@ -4,6 +4,9 @@ import { meloArtifact } from "@/lib/melo-artifact";
 export const meloAbi = meloArtifact.abi;
 export const meloBytecode = meloArtifact.bytecode as `0x${string}`;
 
+export const MELO_CONTRACT_ADDRESS =
+  "0x3014adea7398b6ef1c542943d8628a329124d17c" as Address;
+
 /** 1 ETH → 1,000 MELO. Must match SHARES_PER_ETH in MeloShare.sol. */
 export const MELO_PER_ETH = 1000n;
 
